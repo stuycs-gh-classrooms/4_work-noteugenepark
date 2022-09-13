@@ -1,0 +1,17 @@
+size (400,400);
+background (000,200,100);
+color c = color (0,0,200);
+fill (c);
+circle (100,50,25);
+circle (150,50,25);
+color b = color (200,0,200);
+print ("eugene");
+fill (b);
+rect (100,20,50,20);
+rect (110,10,25,20);
+color d = color (0,0,0);
+fill (d);
+rect (0,60,10000,10);
+color lightblue = color (0,0,99999,500);
+fill (lightblue);
+rect (0, 100, 10000, 10000);
