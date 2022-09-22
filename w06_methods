@@ -1,0 +1,59 @@
+//method made for clouds, wanted to make one for 
+//the airballoon but basket&line made it complicated,
+//and I am running out of time. I'll work on it this weekend.
+
+void cloud (int cx,int cy,int big){
+  fill (255);
+ circle(cx-(big/2), cy, big*0.75);
+circle(cx, cy, big);
+circle(cx+(big/2), cy, big*0.75);
+  
+  
+}
+
+void setup(){
+  
+  size (400,400);
+background (183,244,255); 
+
+color red = color ( #D6133A );
+color white = color ( 250);
+color brown = color (#8E745E);
+color yellow = color ( #F5EC34 );
+stroke (brown); //rope
+line (130,120,135,160);
+line (170,120,165,160);
+
+noStroke(); //balloon
+fill (red);
+ellipse(150, 100, 70, 80);
+fill (white);
+ellipse(150, 100, 50, 80);
+fill (red);
+ellipse(150, 100, 30, 80);
+fill (white);
+ellipse(150, 100, 10, 80);
+
+fill (brown); //basket
+quad (135,160,140,180,160,180,165,160);
+
+
+cloud(230, 250, 60);
+cloud(70, 200, 60);
+cloud(200, 10, 60);
+cloud(350, 350, 100);
+cloud(50, 300,100);
+cloud(370, 75, 120);
+
+
+
+fill (yellow); //sun
+circle(10, 10, 90);
+triangle ( 25, 70, 40, 75, 45 ,60); 
+triangle ( 20, 70, 0, 70 ,10 ,80); 
+triangle (47, 58, 64, 55, 60, 40); 
+triangle (47, 58, 64, 55, 60, 40); 
+triangle (63, 37, 67, 20, 78, 30);
+triangle (66, 17, 66, -4, 78, 8);
+
+}
