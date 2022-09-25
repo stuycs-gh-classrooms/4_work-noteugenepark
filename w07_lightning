@@ -1,0 +1,36 @@
+void setup (){
+size (500,500);
+background (50);
+fill (#39552C);
+rect (0,450,500,50);
+
+drawLightning (50,00,150);
+drawLightning (200,200,8);
+drawLightning (100,300,22);
+drawLightning (300,150,100);
+drawLightning (450,50,200);
+}
+
+void drawLightning(int x, int y, int numParts) {
+;
+fill (255);
+noStroke();
+circle(x-25, y, 30);
+circle(x, y, 50);
+circle(x+25, y, 30);
+
+  stroke (#FCFF50);
+  int yLength = ((500 - y )/numParts);
+ 
+
+while (y <= 500){
+  int nextx = int (random (x-5, x+6));
+  int nexty = y +  yLength;
+line (x,y,nextx,nexty);
+x = nextx;
+y = y + yLength;
+
+
+}
+  
+}
