@@ -1,0 +1,40 @@
+int movingX, movingY, radius;
+
+void setup() {
+  size(500, 500);
+  background (0);
+  movingX = 0 ;
+  movingY = 150;
+  radius = 50;
+  
+  
+  
+}//setup
+
+void circleRow (int startX, int endX, int y, int d){
+fill (255);
+  while (startX + d/2 <= endX) {
+  circle (startX + d/2, y, d);
+  startX = startX+ d;
+  
+  }
+}
+
+
+void draw() {
+background(0);
+circleRow (0,width, 50 ,radius*2);
+
+circle (movingX, movingY, radius*2);
+movingX ++;
+if (movingX == width - radius){
+  movingY = movingY + radius *2 ;
+  movingX = radius ;
+  
+  if (movingY + radius > height) {
+    movingY = 150;
+  }
+  
+  
+}
+}
