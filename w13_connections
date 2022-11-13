@@ -1,0 +1,30 @@
+int[] xvals;
+int[] yvals;
+int numPoints;
+
+void setup() {
+  size(600, 400);
+  background(0);
+  xvals = new int[100];
+  yvals = new int[100];
+
+  makeLines(xvals, yvals, 10);
+  stroke(255);
+  drawLines(xvals, yvals);
+}
+
+void drawLines(int[] xs, int[] ys) {
+  for (numPoints = 1; xs[numPoints] > 0 && ys [numPoints] > 0; numPoints++) {
+    line(xs[numPoints-1], ys[numPoints-1], xs[numPoints], ys[numPoints]);
+  }
+}
+
+void makeLines(int[] xs, int[] ys, int points) {
+  if (points > 99) {
+    points = 99;
+  }
+  for ( numPoints = 0; numPoints < points; numPoints++) {
+    xs[numPoints] = int(random(0, width));
+    ys[numPoints] = int(random(0, height));
+  }
+}
