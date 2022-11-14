@@ -8,20 +8,23 @@ void setup() {
   xvals = new int[100];
   yvals = new int[100];
 
-  makeLines(xvals, yvals, 10);
+  makeLines(xvals, yvals, 100);
   stroke(255);
   drawLines(xvals, yvals);
 }
 
 void drawLines(int[] xs, int[] ys) {
-  for (numPoints = 1; xs[numPoints] > 0 && ys [numPoints] > 0; numPoints++) {
+  for ( numPoints = 1; xs[numPoints] > 0 && ys[numPoints] > 0; numPoints++) {
     line(xs[numPoints-1], ys[numPoints-1], xs[numPoints], ys[numPoints]);
   }
 }
 
 void makeLines(int[] xs, int[] ys, int points) {
-  if (points > 99) {
-    points = 99;
+  if (points > xs.length -1) {
+    points = xs.length -1;
+  }
+  if (points > ys.length -1) {
+    points = ys.length -1;
   }
   for ( numPoints = 0; numPoints < points; numPoints++) {
     xs[numPoints] = int(random(0, width));
