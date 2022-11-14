@@ -14,17 +14,17 @@ void setup() {
 }
 
 void drawLines(int[] xs, int[] ys) {
-  for ( numPoints = 1; xs[numPoints] > 0 && ys[numPoints] > 0; numPoints++) {
-    line(xs[numPoints-1], ys[numPoints-1], xs[numPoints], ys[numPoints]);
+  for ( int count = 1; count < numPoints ; count ++) {
+    line(xs[count-1], ys[count-1], xs[count], ys[count]);
   }
 }
 
 void makeLines(int[] xs, int[] ys, int points) {
-  if (points > xs.length -1) {
-    points = xs.length -1;
+  if (points > xs.length -1 ) {
+    points = xs.length -1 ;
   }
-  if (points > ys.length -1) {
-    points = ys.length -1;
+  if (points > ys.length -1 ) {
+    points = ys.length -1 ;
   }
   for ( numPoints = 0; numPoints < points; numPoints++) {
     xs[numPoints] = int(random(0, width));
